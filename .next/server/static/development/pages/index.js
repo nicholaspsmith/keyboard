@@ -500,7 +500,7 @@ __webpack_require__.r(__webpack_exports__);
 var _jsxFileName = "/Users/nicholassmith/Code/nicksnotes/pages/Keyboard.js";
 
 function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_8__["default"])(["\n  border: 1px solid black;\n  width: ", ";;\n  height: ", ";\n  float: left;\n  margin: 0;\n  margin-left: ", ";\n  margin-right: ", ";\n  background: ", ";\n  z-index: ", ";\n  position: relative;\n  cursor: pointer;\n  &:active {\n    background: rgb(53, 112, 230);\n    outline: none;\n  }\n  &:focus {\n    outline: none;\n  }\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_8__["default"])(["\n  border: 1px solid black;\n  width: ", ";;\n  height: ", ";\n  float: left;\n  margin: 0;\n  margin-left: ", ";\n  margin-right: ", ";\n  background: ", ";\n  z-index: ", ";\n  position: relative;\n  cursor: pointer;\n\n  box-shadow: ", ";;\n  &:active {\n    background: rgb(53, 112, 230);\n    outline: none;\n    box-shadow: none;\n  }\n  &:focus {\n    outline: none;\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -530,6 +530,9 @@ var KeyStyle = styled_components__WEBPACK_IMPORTED_MODULE_11___default.a.div(_te
 }, function (_ref6) {
   var sharp = _ref6.sharp;
   return sharp ? 1 : 0;
+}, function (_ref7) {
+  var sharp = _ref7.sharp;
+  return sharp ? '0px 1px 1px #727272' : 'none';
 });
 
 var Octave = function Octave(a) {
@@ -613,10 +616,13 @@ function (_Component) {
 
     _this = Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__["default"])(this, (_getPrototypeOf2 = Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__["default"])(Key)).call.apply(_getPrototypeOf2, [this].concat(args)));
 
-    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_6__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this), "playNote", function () {
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_6__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this), "playNote", function (synth) {
       var note = _this.props.note;
-      var synth = new tone__WEBPACK_IMPORTED_MODULE_10___default.a.Synth().toMaster();
-      synth.triggerAttackRelease(note, '8n');
+      synth.triggerAttack(note);
+    });
+
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_6__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this), "stopNote", function (synth) {
+      synth.triggerRelease();
     });
 
     return _this;
@@ -625,16 +631,24 @@ function (_Component) {
   Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(Key, [{
     key: "render",
     value: function render() {
+      var _this2 = this;
+
+      var synth = new tone__WEBPACK_IMPORTED_MODULE_10___default.a.Synth().toMaster();
       var _this$props = this.props,
           name = _this$props.name,
           octave = _this$props.octave;
       var sharp = name.indexOf('Sharp') > -1;
       return react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(KeyStyle, {
         sharp: sharp,
-        onClick: this.playNote,
+        onMouseDown: function onMouseDown() {
+          return _this2.playNote(synth);
+        },
+        onMouseUp: function onMouseUp() {
+          return _this2.stopNote(synth);
+        },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 100
+          lineNumber: 106
         },
         __self: this
       });
@@ -652,7 +666,7 @@ function (_Component2) {
   function Keyboard() {
     var _getPrototypeOf3;
 
-    var _this2;
+    var _this3;
 
     Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_7__["default"])(this, Keyboard);
 
@@ -660,9 +674,9 @@ function (_Component2) {
       args[_key2] = arguments[_key2];
     }
 
-    _this2 = Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__["default"])(this, (_getPrototypeOf3 = Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__["default"])(Keyboard)).call.apply(_getPrototypeOf3, [this].concat(args)));
+    _this3 = Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__["default"])(this, (_getPrototypeOf3 = Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__["default"])(Keyboard)).call.apply(_getPrototypeOf3, [this].concat(args)));
 
-    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_6__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this2), "renderOctave", function (octave, num) {
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_6__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this3), "renderOctave", function (octave, num) {
       var keys = _babel_runtime_corejs2_core_js_object_keys__WEBPACK_IMPORTED_MODULE_0___default()(octave);
 
       return keys.map(function (name) {
@@ -673,29 +687,29 @@ function (_Component2) {
           octave: num,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 109
+            lineNumber: 119
           },
           __self: this
         });
       });
     });
 
-    return _this2;
+    return _this3;
   }
 
   Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(Keyboard, [{
     key: "render",
     value: function render() {
-      var _this3 = this;
+      var _this4 = this;
 
       return react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 112
+          lineNumber: 122
         },
         __self: this
       }, notes.map(function (octave, num) {
-        return _this3.renderOctave(octave, num);
+        return _this4.renderOctave(octave, num);
       }));
     }
   }]);

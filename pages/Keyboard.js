@@ -14,9 +14,12 @@ const KeyStyle = styled.div`
   z-index: ${({sharp}) => sharp ? 1 : 0};
   position: relative;
   cursor: pointer;
+
+  box-shadow: ${({sharp}) => sharp ? '0px 1px 1px #727272' : 'none'};;
   &:active {
     background: rgb(53, 112, 230);
     outline: none;
+    box-shadow: none;
   }
   &:focus {
     outline: none;
@@ -88,16 +91,23 @@ for (var i = 0 - octaves/2; i < octaves/2; i++) {
 
 
 class Key extends Component {
-  playNote = () => {
+  playNote = synth => {
     const { note } = this.props
-    var synth = new Tone.Synth().toMaster()
-    synth.triggerAttackRelease(note, '8n')
+    synth.triggerAttack(note)
+  }
+  stopNote = synth => {
+    synth.triggerRelease()
   }
   render() {
+    var synth = new Tone.Synth().toMaster()
     const { name, octave } = this.props
     const sharp = name.indexOf('Sharp') > -1
     return (
-      <KeyStyle sharp={sharp} onClick={this.playNote}>
+      <KeyStyle
+        sharp={sharp}
+        onMouseDown={() => this.playNote(synth)}
+        onMouseUp={() => this.stopNote(synth)}
+      >
       </KeyStyle>
     )
   }
