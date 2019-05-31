@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Tone from 'tone'
 import styled from 'styled-components'
 
 const KeyStyle = styled.div`
@@ -12,6 +13,14 @@ const KeyStyle = styled.div`
   background: ${({sharp}) => sharp ? '#000' : '#fff'};
   z-index: ${({sharp}) => sharp ? 1 : 0};
   position: relative;
+  cursor: pointer;
+  &:active {
+    background: rgb(53, 112, 230);
+    outline: none;
+  }
+  &:focus {
+    outline: none;
+  }
 `
 
 class Octave {
@@ -77,12 +86,18 @@ for (var i = 0 - octaves/2; i < octaves/2; i++) {
   notes.push(octave)
 }
 
+
 class Key extends Component {
+  playNote = () => {
+    const { note } = this.props
+    var synth = new Tone.Synth().toMaster()
+    synth.triggerAttackRelease(note, '8n')
+  }
   render() {
-    const { note, name, octave } = this.props
+    const { name, octave } = this.props
     const sharp = name.indexOf('Sharp') > -1
     return (
-      <KeyStyle sharp={sharp}>
+      <KeyStyle sharp={sharp} onClick={this.playNote}>
       </KeyStyle>
     )
   }
@@ -91,12 +106,9 @@ class Key extends Component {
 class Keyboard extends Component {
   renderOctave = (octave, num) => {
     const keys = Object.keys(octave)
-    console.log(keys)
-    console.log(octave[keys[0]])
     return keys.map(name => <Key key={octave[name].freq} note={octave[name].freq} name={name} octave={num} />)
   }
   render() {
-    console.log(notes)
     return <div>
       {notes.map((octave, num) => this.renderOctave(octave, num))}
     </div>
