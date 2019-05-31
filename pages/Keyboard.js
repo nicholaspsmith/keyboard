@@ -3,11 +3,15 @@ import styled from 'styled-components'
 
 const KeyStyle = styled.div`
   border: 1px solid black;
-  width: 15px;
-  height: 100px;
-  background: ${({sharp}) => sharp ? '#000' : '#fff'};
+  width: ${({sharp}) => sharp ? '16px' : '20px'};;
+  height: ${({sharp}) => sharp ? '85px' : '130px'};
   float: left;
   margin: 0;
+  margin-left: ${({sharp}) => sharp ? '-10px' : '0'};
+  margin-right: ${({sharp}) => sharp ? '-10px' : '0'};
+  background: ${({sharp}) => sharp ? '#000' : '#fff'};
+  z-index: ${({sharp}) => sharp ? 1 : 0};
+  position: relative;
 `
 
 class Octave {

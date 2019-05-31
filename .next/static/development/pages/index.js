@@ -6193,7 +6193,7 @@ __webpack_require__.r(__webpack_exports__);
 var _jsxFileName = "/Users/nicholassmith/Code/nicksnotes/pages/Keyboard.js";
 
 function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_8__["default"])(["\n  border: 1px solid black;\n  width: 15px;\n  height: 100px;\n  background: ", ";\n  float: left;\n  margin: 0;\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_8__["default"])(["\n  border: 1px solid black;\n  width: ", ";;\n  height: ", ";\n  float: left;\n  margin: 0;\n  margin-left: ", ";\n  margin-right: ", ";\n  background: ", ";\n  z-index: ", ";\n  position: relative;\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -6206,7 +6206,22 @@ function _templateObject() {
 
 var KeyStyle = styled_components__WEBPACK_IMPORTED_MODULE_10__["default"].div(_templateObject(), function (_ref) {
   var sharp = _ref.sharp;
+  return sharp ? '16px' : '20px';
+}, function (_ref2) {
+  var sharp = _ref2.sharp;
+  return sharp ? '85px' : '130px';
+}, function (_ref3) {
+  var sharp = _ref3.sharp;
+  return sharp ? '-10px' : '0';
+}, function (_ref4) {
+  var sharp = _ref4.sharp;
+  return sharp ? '-10px' : '0';
+}, function (_ref5) {
+  var sharp = _ref5.sharp;
   return sharp ? '#000' : '#fff';
+}, function (_ref6) {
+  var sharp = _ref6.sharp;
+  return sharp ? 1 : 0;
 });
 
 var Octave = function Octave(a) {
@@ -6295,7 +6310,7 @@ function (_Component) {
         sharp: sharp,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 81
+          lineNumber: 85
         },
         __self: this
       });
@@ -6336,7 +6351,7 @@ function (_Component2) {
           octave: num,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 92
+            lineNumber: 96
           },
           __self: this
         });
@@ -6355,7 +6370,7 @@ function (_Component2) {
       return react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 96
+          lineNumber: 100
         },
         __self: this
       }, notes.map(function (octave, num) {
@@ -6407,7 +6422,7 @@ var Index = function Index() {
 
 /***/ }),
 
-/***/ 1:
+/***/ 0:
 /*!********************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fnicholassmith%2FCode%2Fnicksnotes%2Fpages%2Findex.js ***!
   \********************************************************************************************************************************/
@@ -6430,5 +6445,5 @@ module.exports = dll_6dc2816e14fab51b8269;
 
 /***/ })
 
-},[[1,"static/runtime/webpack.js"]]]);
+},[[0,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map
