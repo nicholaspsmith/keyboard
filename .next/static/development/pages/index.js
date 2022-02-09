@@ -2459,10 +2459,10 @@ function index (resultFn, isEqual) {
 
 /***/ }),
 
-/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FUsers%2Fnicholassmith%2FCode%2Fnicksnotes%2Fpages%2Findex.js!./":
-/*!****************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FUsers%2Fnicholassmith%2FCode%2Fnicksnotes%2Fpages%2Findex.js ***!
-  \****************************************************************************************************************************************************************************/
+/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FUsers%2Fnicholassmith%2FCode%2Fkeyboard%2Fpages%2Findex.js!./":
+/*!**************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FUsers%2Fnicholassmith%2FCode%2Fkeyboard%2Fpages%2Findex.js ***!
+  \**************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2484,12 +2484,12 @@ function index (resultFn, isEqual) {
 
 /***/ "./node_modules/object-assign/index.js":
 /*!***************************************************************************************************!*\
-  !*** delegated ./node_modules/object-assign/index.js from dll-reference dll_6dc2816e14fab51b8269 ***!
+  !*** delegated ./node_modules/object-assign/index.js from dll-reference dll_1aef2d0bbc0d334d831c ***!
   \***************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_6dc2816e14fab51b8269 */ "dll-reference dll_6dc2816e14fab51b8269"))("./node_modules/object-assign/index.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_1aef2d0bbc0d334d831c */ "dll-reference dll_1aef2d0bbc0d334d831c"))("./node_modules/object-assign/index.js");
 
 /***/ }),
 
@@ -2690,12 +2690,12 @@ process.umask = function() { return 0; };
 
 /***/ "./node_modules/prop-types/checkPropTypes.js":
 /*!*********************************************************************************************************!*\
-  !*** delegated ./node_modules/prop-types/checkPropTypes.js from dll-reference dll_6dc2816e14fab51b8269 ***!
+  !*** delegated ./node_modules/prop-types/checkPropTypes.js from dll-reference dll_1aef2d0bbc0d334d831c ***!
   \*********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_6dc2816e14fab51b8269 */ "dll-reference dll_6dc2816e14fab51b8269"))("./node_modules/prop-types/checkPropTypes.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_1aef2d0bbc0d334d831c */ "dll-reference dll_1aef2d0bbc0d334d831c"))("./node_modules/prop-types/checkPropTypes.js");
 
 /***/ }),
 
@@ -3303,12 +3303,12 @@ if (true) {
 
 /***/ "./node_modules/prop-types/lib/ReactPropTypesSecret.js":
 /*!*******************************************************************************************************************!*\
-  !*** delegated ./node_modules/prop-types/lib/ReactPropTypesSecret.js from dll-reference dll_6dc2816e14fab51b8269 ***!
+  !*** delegated ./node_modules/prop-types/lib/ReactPropTypesSecret.js from dll-reference dll_1aef2d0bbc0d334d831c ***!
   \*******************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_6dc2816e14fab51b8269 */ "dll-reference dll_6dc2816e14fab51b8269"))("./node_modules/prop-types/lib/ReactPropTypesSecret.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_1aef2d0bbc0d334d831c */ "dll-reference dll_1aef2d0bbc0d334d831c"))("./node_modules/prop-types/lib/ReactPropTypesSecret.js");
 
 /***/ }),
 
@@ -3570,12 +3570,12 @@ if (false) {} else {
 
 /***/ "./node_modules/react/index.js":
 /*!*******************************************************************************************!*\
-  !*** delegated ./node_modules/react/index.js from dll-reference dll_6dc2816e14fab51b8269 ***!
+  !*** delegated ./node_modules/react/index.js from dll-reference dll_1aef2d0bbc0d334d831c ***!
   \*******************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_6dc2816e14fab51b8269 */ "dll-reference dll_6dc2816e14fab51b8269"))("./node_modules/react/index.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_1aef2d0bbc0d334d831c */ "dll-reference dll_1aef2d0bbc0d334d831c"))("./node_modules/react/index.js");
 
 /***/ }),
 
@@ -6210,7 +6210,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _jsxFileName = "/Users/nicholassmith/Code/nicksnotes/pages/Keyboard.js";
+var _jsxFileName = "/Users/nicholassmith/Code/keyboard/pages/Keyboard.js";
 
 function _templateObject() {
   var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_8__["default"])(["\n  border: 1px solid black;\n  width: ", ";;\n  height: ", ";\n  float: left;\n  margin: 0;\n  margin-left: ", ";\n  margin-right: ", ";\n  background: ", ";\n  z-index: ", ";\n  position: relative;\n  cursor: pointer;\n\n  box-shadow: ", ";;\n  &:active {\n    background: rgb(53, 112, 230);\n    outline: none;\n    box-shadow: none;\n  }\n  &:focus {\n    outline: none;\n  }\n"]);
@@ -6346,25 +6346,29 @@ function (_Component) {
     value: function render() {
       var _this2 = this;
 
-      var synth = new tone__WEBPACK_IMPORTED_MODULE_10___default.a.Synth().toMaster();
-      var _this$props = this.props,
-          name = _this$props.name,
-          octave = _this$props.octave;
-      var sharp = name.indexOf('Sharp') > -1;
-      return react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(KeyStyle, {
-        sharp: sharp,
-        onMouseDown: function onMouseDown() {
-          return _this2.playNote(synth);
-        },
-        onMouseUp: function onMouseUp() {
-          return _this2.stopNote(synth);
-        },
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 106
-        },
-        __self: this
-      });
+      if (typeof window !== 'undefined') {
+        var synth = new tone__WEBPACK_IMPORTED_MODULE_10___default.a.Synth().toMaster();
+        var _this$props = this.props,
+            name = _this$props.name,
+            _octave = _this$props.octave;
+        var sharp = name.indexOf('Sharp') > -1;
+        return react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(KeyStyle, {
+          sharp: sharp,
+          onMouseDown: function onMouseDown() {
+            return _this2.playNote(synth);
+          },
+          onMouseUp: function onMouseUp() {
+            return _this2.stopNote(synth);
+          },
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 107
+          },
+          __self: this
+        });
+      }
+
+      return null;
     }
   }]);
 
@@ -6400,7 +6404,7 @@ function (_Component2) {
           octave: num,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 119
+            lineNumber: 122
           },
           __self: this
         });
@@ -6418,7 +6422,7 @@ function (_Component2) {
       return react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 122
+          lineNumber: 125
         },
         __self: this
       }, notes.map(function (octave, num) {
@@ -6446,7 +6450,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _Keyboard__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Keyboard */ "./pages/Keyboard.js");
-var _jsxFileName = "/Users/nicholassmith/Code/nicksnotes/pages/index.js";
+var _jsxFileName = "/Users/nicholassmith/Code/keyboard/pages/index.js";
 
 
 
@@ -6471,25 +6475,25 @@ var Index = function Index() {
 /***/ }),
 
 /***/ 0:
-/*!********************************************************************************************************************************!*\
-  !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fnicholassmith%2FCode%2Fnicksnotes%2Fpages%2Findex.js ***!
-  \********************************************************************************************************************************/
+/*!******************************************************************************************************************************!*\
+  !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fnicholassmith%2FCode%2Fkeyboard%2Fpages%2Findex.js ***!
+  \******************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fnicholassmith%2FCode%2Fnicksnotes%2Fpages%2Findex.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FUsers%2Fnicholassmith%2FCode%2Fnicksnotes%2Fpages%2Findex.js!./");
+module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fnicholassmith%2FCode%2Fkeyboard%2Fpages%2Findex.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FUsers%2Fnicholassmith%2FCode%2Fkeyboard%2Fpages%2Findex.js!./");
 
 
 /***/ }),
 
-/***/ "dll-reference dll_6dc2816e14fab51b8269":
+/***/ "dll-reference dll_1aef2d0bbc0d334d831c":
 /*!*******************************************!*\
-  !*** external "dll_6dc2816e14fab51b8269" ***!
+  !*** external "dll_1aef2d0bbc0d334d831c" ***!
   \*******************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = dll_6dc2816e14fab51b8269;
+module.exports = dll_1aef2d0bbc0d334d831c;
 
 /***/ })
 
